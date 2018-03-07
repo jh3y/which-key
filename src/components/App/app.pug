@@ -1,0 +1,11 @@
+#app
+  .keys
+    h1(v-if='!keyed.length') Start smashing those keys!
+    Key(:value='keyed[0].key.trim() === "" ? keyed[0].code : keyed[0].key', :code='keyed[0].which', :event='keyed[0].type', v-if='keyed.length')
+    .keys__backlog(v-if='showLog')
+      Key(v-for='(e, key) in keyed.slice(1)', :value='e.key.trim() === "" ? e.code : e.key', :code='e.which', :event='e.type', :key="key", v-if='keyed.length > 1')
+  .filters
+    KeyFilter(v-for='(value, key) in typeFilters', :label='key', :active='value', :toggle='toggleFilter', :key="key", type='type')
+    KeyFilter(v-for='(value, key) in valueFilters', :label='key', :active='value', :toggle='toggleFilter', :key="key", type='value')
+    KeyFilter(label='show log', :active='showLog', :toggle='toggleLog')
+    button(@click='clear') Clear
