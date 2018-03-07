@@ -1,0 +1,50 @@
+{
+  "name": "which-key",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
+    "lint": "vue-cli-service lint",
+    "e2e:open": "vue-cli-service e2e:open"
+  },
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
+    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.6",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.6",
+    "@vue/cli-service": "latest",
+    "@vue/eslint-config-prettier": "^3.0.0-beta.6",
+    "@vue/test-utils": "^1.0.0-beta.10",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "normalize.css": "^8.0.0",
+    "pug": "^2.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
