@@ -3,6 +3,7 @@ import 'normalize.css'
 
 import App from '@/components/App/index.vue'
 import './style/index.styl'
+import './registerServiceWorker'
 
 Vue.config.productionTip = false
 
