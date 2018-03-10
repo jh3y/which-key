@@ -33,10 +33,14 @@ export default {
      * info will be displayed in the tab 👍
      */ handleDocumentHide: function() {
       const { keyed } = this
-      const tabMsg = keyed.length
-        ? `${keyed[0].key.trim()} = ${keyed[0].which} 🤓`
-        : 'Which Key? 🤔'
-      document.title = document.hidden ? tabMsg : 'Which Key? 🤔'
+      const docTitle = 'Which Key? 🤔'
+      let tabMsg = docTitle
+      if (keyed.length) {
+        const { code, key, which } = keyed[0]
+        const keyValue = key.trim() === '' ? code : key
+        tabMsg = `${keyValue} = ${which} 🤓`
+      }
+      document.title = document.hidden ? tabMsg : docTitle
     },
     log: function(e) {
       const { keyed } = this
