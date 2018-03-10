@@ -4,13 +4,13 @@
 [![Lighthouse score: 91/100](https://lighthouse-badge.appspot.com/?score=91&compact&category=Perf)](https://github.com/ebidel/lighthouse-badge)
 
 # which-key
-## an app for grabbing keyboard event information
+## an app for grabbing JavaScript KeyboardEvent info!
 
 ![alt tag](https://raw.github.com/jh3y/pics/master/which-key/which.gif)
 
-* Simple UI for grabbing keyboard event information 🍭
+* Simple UI for viewing and grabbing JavaScript KeyboardEvent information 🍭
 * Filter by character and event type 🤓
-* See the code for the last pressed key when moving to another tab for quick reference 👍
+* Last pressed key can be seen in the browser tab when moving to another tab for reference 👍
 
 ### Contributing
 Any suggestions, improvements or issues are welcome 😄 Feel free to raise an issue, open a PR or tweet me [@_jh3y](https://twitter.com/@_jh3y) 🐦
