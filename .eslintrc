@@ -3,5 +3,9 @@
   "extends": [
     "plugin:vue/essential",
     "@vue/prettier"
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": 2,
+    "no-console": 2
+  }
 }

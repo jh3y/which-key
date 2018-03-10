@@ -19,9 +19,8 @@ export default {
     }
   },
   methods: {
-    bind: function(e) {
+    bind: function() {
       const { log, typeFilters } = this
-      if (e) console.info('toggle filters')
       for (const filter of Object.keys(typeFilters)) {
         if (typeFilters[filter]) window.addEventListener(filter, log)
       }
@@ -35,9 +34,9 @@ export default {
      */ handleDocumentHide: function() {
       const { keyed } = this
       const tabMsg = keyed.length
-        ? `${keyed[0].key.trim()} = ${keyed[0].which}`
-        : 'which-key'
-      document.title = document.hidden ? tabMsg : 'which-key'
+        ? `${keyed[0].key.trim()} = ${keyed[0].which} 🤓`
+        : 'Which Key? 🤔'
+      document.title = document.hidden ? tabMsg : 'Which Key? 🤔'
     },
     log: function(e) {
       const { keyed } = this
